@@ -1,737 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishnu Loya - Resume</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Alternate Font Awesome Link if the above doesn't work -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baker's Staple - Premium Glazes for Bakers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f8e9e2;
+            --secondary-color: #e6c9df;
+            --accent-color: #b8d8e3;
+            --text-color: #4a4a4a;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #fefefe;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .hero {
+            background-color: var(--primary-color);
+            padding: 6rem 0;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            border: none;
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #9ec9d8;
+        }
+        
+        .product-card {
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .about-section {
+            background-color: #f9f9f9;
+        }
+        
+        .contact-form label {
+            font-weight: 500;
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(184, 216, 227, 0.25);
+        }
+        
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 3rem 0;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <div class="logo">VL</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="profile-image">
-          <div class="initials">VL</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Baker's Staple</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="header-text">
-          <h1>Vishnu Loya</h1>
-          <p class="tagline">Business Administration Student | Finance Enthusiast | Future Entrepreneur</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Premium Glazes for Bakery Perfection</h1>
+                    <p class="lead">Elevate your baked goods with our handcrafted, flavorful glazes. Made with quality ingredients for professional and home bakers alike.</p>
+                    <a href="#products" class="btn btn-primary mt-3">Explore Flavors</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/api/placeholder/600/400" alt="Assorted pastries with glazes" class="img-fluid rounded">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="section-content">
-        <p>I'm an enthusiastic person with a strong academic background, a keen interest in Mathematics, Finance, Stock Markets & Mutual Funds, Private Equity & Venture Capital, Marketing, besides all Business domains, seeking an intern role and some valuable learning.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <div class="section-content">
-        <div class="education-item">
-          <div class="edu-details">
-            <h3>Bachelor's of Business Administration (BBA)</h3>
-            <p class="institution">SP Jain School of Global Management</p>
-            <p class="duration">Current - 2nd semester</p>
-            <ul class="highlights">
-              <li>1st semester - 3.86 CGPA (4.3 Scale)</li>
-              <li>Secured a place in the Dean's list in 1st semester</li>
-            </ul>
-          </div>
+    <!-- Products Section -->
+    <section class="py-5" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Glaze Collection</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Classic Vanilla Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Vanilla Glaze</h5>
+                            <p class="card-text">Our bestselling smooth, sweet vanilla glaze perfect for donuts and pastries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Chocolate Ganache Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Ganache Glaze</h5>
+                            <p class="card-text">Rich, silky chocolate glaze that sets beautifully on cakes and pastries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Lemon Zest Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Lemon Zest Glaze</h5>
+                            <p class="card-text">Tangy and bright glaze with real lemon zest, perfect for summer treats.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Maple Pecan Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Maple Pecan Glaze</h5>
+                            <p class="card-text">Sweet maple flavor with crushed pecans for added texture and nutty taste.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Raspberry Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Raspberry Glaze</h5>
+                            <p class="card-text">Made with real raspberries for a fruity, vibrant topping to any pastry.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Caramel Glaze">
+                        <div class="card-body">
+                            <h5 class="card-title">Caramel Glaze</h5>
+                            <p class="card-text">Rich, buttery caramel glaze that adds depth and sweetness to any dessert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="education-item">
-          <div class="edu-details">
-            <h3>Bachelor of Business Administration in Digital Business and Entrepreneurship (BBA-DBE)</h3>
-            <p class="institution">IIM-Bangalore</p>
-            <p class="duration">1st year - Online</p>
-          </div>
+    <!-- About Section -->
+    <section class="about-section py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="/api/placeholder/600/400" alt="Our workshop" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="section-title">About Baker's Staple</h2>
+                    <p>Founded in 2018, Baker's Staple began with a passion for creating perfect glazes that would elevate any baked good. What started as experiments in a home kitchen has grown into a beloved supplier for local bakeries and home bakers alike.</p>
+                    <p>We pride ourselves on using only high-quality ingredients, creating glazes that are ready to use and consistently delicious. Our small team handcrafts each batch with care, ensuring the perfect consistency and flavor every time.</p>
+                    <p>Whether you're a professional baker looking for reliable, delicious glazes for your creations or a home baker wanting to add a professional touch to your treats, Baker's Staple has the perfect glaze for you.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="education-item">
-          <div class="edu-details">
-            <h3>AISSCE (CBSE)</h3>
-            <p class="percentage">98.4%</p>
-          </div>
+    <!-- FAQ Section -->
+    <section class="py-5" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How should I store my glazes?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our glazes should be stored in a cool, dry place. Once opened, keep refrigerated and use within 3 weeks for best quality. Bring to room temperature before use.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Do you offer wholesale pricing?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We offer wholesale pricing for bakeries, cafés, and other food businesses. Please contact us through our form below for wholesale inquiries and pricing.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Are your glazes suitable for vegan baking?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a select range of vegan glazes including our fruit-based varieties. Please check the product descriptions or contact us to confirm which glazes are vegan-friendly.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            What is the shelf life of your products?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Unopened, our glazes have a shelf life of 4 months from production date. Each jar is labeled with a "best by" date for your convenience.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="education-item">
-          <div class="edu-details">
-            <h3>AISSE (CBSE)</h3>
-            <p class="percentage">96.8%</p>
-          </div>
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject">
+                                <option selected>General Inquiry</option>
+                                <option>Wholesale Information</option>
+                                <option>Product Questions</option>
+                                <option>Feedback</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ms-lg-4 mt-4 mt-lg-0">
+                        <h4>Contact Information</h4>
+                        <p><strong>Email:</strong> info@bakersstaple.com</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                        <p><strong>Address:</strong> 123 Bakery Lane, Flourtown, CA 90210</p>
+                        <p><strong>Hours:</strong> Monday-Friday, 9am-5pm</p>
+                        
+                        <h4 class="mt-4">Follow Us</h4>
+                        <div class="d-flex gap-3 mt-2">
+                            <a href="#" class="text-decoration-none">
+                                <img src="/api/placeholder/32/32" alt="Facebook">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <img src="/api/placeholder/32/32" alt="Instagram">
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <img src="/api/placeholder/32/32" alt="Pinterest">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="achievements">
-    <div class="container">
-      <h2>Achievements</h2>
-      <div class="section-content">
-        <div class="achievements-grid">
-          <div class="achievement-card">
-            <div class="achievement-icon">
-              <i class="fas fa-trophy"></i>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Baker's Staple</h5>
+                    <p>Crafting premium glazes for professional and home bakers since 2018.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#products" class="text-white">Products</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for updates and baking tips</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <button class="btn btn-light" type="button">Subscribe</button>
+                    </div>
+                </div>
             </div>
-            <div class="achievement-details">
-              <h3>Global Economics Olympiad</h3>
-              <p>Ranked 1st in the Uttarakhand region</p>
+            <div class="border-top border-secondary pt-4 mt-4">
+                <p class="text-center mb-0">&copy; 2025 Baker's Staple. All rights reserved.</p>
             </div>
-          </div>
-
-          <div class="achievement-card">
-            <div class="achievement-icon">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="achievement-details">
-              <h3>Woodstock Entrepreneurship Fest</h3>
-              <p>Placed 2nd</p>
-            </div>
-          </div>
-
-          <div class="achievement-card">
-            <div class="achievement-icon">
-              <i class="fas fa-award"></i>
-            </div>
-            <div class="achievement-details">
-              <h3>MIS Business Conclave</h3>
-              <p>Placed 2nd</p>
-            </div>
-          </div>
-
-          <div class="achievement-card">
-            <div class="achievement-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="achievement-details">
-              <h3>Leadership Experience</h3>
-              <p>Led at many cabinet positions in school life and organized events throughout</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section id="skills">
-    <div class="container">
-      <h2>Skills & Interests</h2>
-      <div class="section-content">
-        <div class="skills-container">
-          <div class="skill-group">
-            <h3>Professional Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Logical reasoning</span>
-              <span class="skill-tag">Analytical skills</span>
-              <span class="skill-tag">Team Player</span>
-            </div>
-          </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple form handling with alert
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
 
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">English</span>
-              <span class="skill-tag">Hindi</span>
-              <span class="skill-tag">Telugu</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h3>Hobbies</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Cricket</span>
-              <span class="skill-tag">Chess</span>
-              <span class="skill-tag">Sports</span>
-              <span class="skill-tag">Working out</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <div class="section-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Phone</h3>
-              <p>+91 9493522398</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <p>vlsanaar2103@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Location</h3>
-              <p>Mumbai, Maharashtra</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <h3>Send me a message</h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Vishnu Loya. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#" class="social-icon" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-/* Base Styles and Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #2563eb; /* A professional blue */
-  --secondary-color: #1e40af; /* Darker blue for contrast */
-  --accent-color: #dbeafe; /* Very light blue for backgrounds */
-  --text-color: #1e293b; /* Dark slate for main text */
-  --light-text: #64748b; /* Lighter text for secondary information */
-  --background: #f8fafc; /* Off-white background */
-  --card-bg: #ffffff; /* White background for cards */
-  --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.3;
-  color: var(--text-color);
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-h2:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
-h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--secondary-color);
-}
-
-section {
-  padding: 70px 0;
-}
-
-section:nth-child(even) {
-  background-color: var(--accent-color);
-}
-
-.section-content {
-  margin-top: 2rem;
-}
-
-ul {
-  list-style-position: inside;
-  margin-bottom: 1rem;
-}
-
-/* Navigation */
-nav {
-  background-color: var(--card-bg);
-  box-shadow: var(--box-shadow);
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
-
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  padding: 5px 10px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin-left: 30px;
-}
-
-.nav-links a {
-  color: var(--text-color);
-  font-weight: 500;
-  padding: 5px 0;
-  position: relative;
-}
-
-.nav-links a:hover {
-  color: var(--primary-color);
-}
-
-.nav-links a:after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transition: var(--transition);
-}
-
-.nav-links a:hover:after {
-  width: 100%;
-}
-
-/* Header Section */
-header {
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 150px 0 80px 0;
-  text-align: center;
-}
-
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 30px;
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.initials {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-}
-
-.header-text h1 {
-  color: white;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* About Section */
-.about-section {
-  background-color: var(--card-bg);
-  padding: 60px 0;
-}
-
-.about-section p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Education Section */
-.education-item {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-
-.education-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.institution {
-  color: var(--primary-color);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.duration, .percentage {
-  color: var(--light-text);
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.highlights {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-/* Achievements Section */
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.achievement-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  padding: 25px;
-  box-shadow: var(--box-shadow);
-  display: flex;
-  align-items: flex-start;
-  transition: var(--transition);
-}
-
-.achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.achievement-icon {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  background-color: var(--accent-color);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-}
-
-.achievement-details {
-  flex: 1;
-}
-
-/* Skills Section */
-.skill-group {
-  margin-bottom: 30px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.skill-tag {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  padding: 8px 16px;
-  border-radius: 50px;
-  display: inline-block;
-  font-size: 0.9rem;
-  transition: var(--transition);
-  border: 1px solid var(--primary-color);
-}
-
-.skill-tag:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* Contact Section */
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  background-color: var(--card-bg);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-right: 15px;
-}
-
-.contact-form {
-  background-color: var(--card-bg);
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--text-color);
-  font-weight: 500;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #e2e8f0;
-  border-radius: var(--border-radius);
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-}
-
-.btn {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Footer */
-footer {
-  background-color: #1e293b;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-links {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: white;
-  transition: var(--transition);
-}
-
-.social-icon:hover {
-  background-color: var(--primary-color);
-  transform: translateY(-3px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav .container {
-    flex-direction: column;
-  }
-  
-  .logo {
-    margin-bottom: 15px;
-  }
-  
-  .nav-links {
-    width: 100%;
-    justify-content: space-around;
-  }
-  
-  .nav-links li {
-    margin: 0;
-  }
-  
-  header {
-    padding: 120px 0 60px 0;
-  }
-  
-  section {
-    padding: 50px 0;
-  }
-  
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.7rem;
-  }
-  
-  .nav-links {
-    flex-wrap: wrap;
-  }
-  
-  .nav-links li {
-    margin: 5px 10px;
-  }
-}
